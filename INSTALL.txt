@@ -1,0 +1,62 @@
+================================================================================
+   SCREEN RECORDER PRO - QUICK INSTALLATION GUIDE
+================================================================================
+
+STEP 1: INSTALL PYTHON DEPENDENCIES
+------------------------------------
+Open Command Prompt in this folder and run:
+
+    pip install -r requirements.txt
+
+
+STEP 2: INSTALL FFMPEG (REQUIRED!)
+-----------------------------------
+Windows - Option A (Recommended):
+1. Download from: https://www.gyan.dev/ffmpeg/builds/
+2. Extract to C:\ffmpeg
+3. Add C:\ffmpeg\bin to System PATH
+4. Verify: ffmpeg -version
+
+Windows - Option B (Chocolatey):
+    choco install ffmpeg
+
+Windows - Option C (Scoop):
+    scoop install ffmpeg
+
+
+STEP 3: RUN THE APPLICATION
+----------------------------
+    python main.py
+
+
+KEYBOARD SHORTCUTS
+------------------
+Ctrl+Shift+R  - Start Recording
+Ctrl+Shift+S  - Stop Recording
+ESC           - Cancel region selection
+
+
+TROUBLESHOOTING
+---------------
+❌ "FFmpeg not found" → Install FFmpeg (see Step 2)
+❌ "No microphone"    → Check Windows Privacy Settings
+❌ Hotkeys not working → Run as Administrator
+❌ Recording laggy    → Lower FPS in settings
+
+
+BUILD AS EXE (OPTIONAL)
+-----------------------
+    pip install pyinstaller
+    pyinstaller --onefile --windowed --name="ScreenRecorder" main.py
+
+Executable will be in: dist/ScreenRecorder.exe
+
+
+NEED HELP?
+----------
+Read README.md for complete documentation
+Check output/recordings/ for saved videos
+
+================================================================================
+                        Happy Recording! 🎥
+================================================================================
